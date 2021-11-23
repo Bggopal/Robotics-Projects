@@ -1,0 +1,39 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"15 C:\Users\gopik\Documents\Robotics_lab\mtr_directionctrl_pic\mtr_directionctrl_pic.X\newmain.c
+[v _direction_change_frwd1 direction_change_frwd1 `(v  1 e 1 0 ]
+"22
+[v _main main `(v  1 e 1 0 ]
+"1437 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"2716
+[v _RC4 RC4 `VEb  1 e 0 @60 ]
+"2719
+[v _RC5 RC5 `VEb  1 e 0 @61 ]
+"2722
+[v _RC6 RC6 `VEb  1 e 0 @62 ]
+"2725
+[v _RC7 RC7 `VEb  1 e 0 @63 ]
+"2941
+[v _TRISB2 TRISB2 `VEb  1 e 0 @1074 ]
+"22 C:\Users\gopik\Documents\Robotics_lab\mtr_directionctrl_pic\mtr_directionctrl_pic.X\newmain.c
+[v _main main `(v  1 e 1 0 ]
+{
+"29
+} 0
+"15
+[v _direction_change_frwd1 direction_change_frwd1 `(v  1 e 1 0 ]
+{
+"20
+} 0
