@@ -1728,21 +1728,28 @@ extern __bank0 __bit __timeout;
 #pragma config CPD = OFF
 #pragma config WRT = OFF
 #pragma config CP = OFF
-
-
-
-void direction_change_frwd1()
+# 23 "newmain.c"
+void main ()
 {
-    RC4=1; RC5=0;
-    RC6=0; RC7=1;
-
- }
-
-void main()
-{
-
-    TRISC = 0x00;
-    TRISB2 = 1;
-
-    direction_change_frwd1();
+    TRISD = 0x80;
+    TRISB = 0x00;
+    RD7 = 1;
+    RB0= 0;
+    RB5= 0;
+    RB1 = 0;
+    RB2 = 0;
+    while(1)
+    {
+        RB0 = 1;
+        RB5 = 1;
+        if (RD7 == 1)
+        {
+            RB1 = 1; RB2 = 0;
+            RB3 = 0; RB4 = 1;
+        }
+        else{
+            RB1 = 0; RB2 = 1;
+            RB3 = 1; RB4 = 0;
+        }
+    }
 }

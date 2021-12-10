@@ -12,18 +12,35 @@
 
 #define _XTAL_FREQ 20000000
 
-void direction_change_frwd1()
+#define SW RD7
+#define ENA RB0
+#define ENB RB5
+#define MTR_1 RB1
+#define MTR_2 RB2
+#define MTR_3 RB3
+#define MTR_4 RB4
+
+void main ()
 {
-    RC4=1; RC5=0; //Motor 1 reverse
-    RC6=0; RC7=1; //Motor 2 reverse  
-    //__delay_ms(1000);   
- }
-     
-void main()
-{
-        
-    TRISC = 0x00; //Motor 2 pins declared as output
-    TRISB2 = 1; 
-    
-    direction_change_frwd1();
+    TRISD = 0x80;
+    TRISB = 0x00;
+    SW = 1;
+    ENA= 0;
+    ENB= 0;
+    MTR_1 = 0;
+    MTR_2 = 0;
+    while(1)
+    {
+        ENA = 1;
+        ENB = 1;
+        if (SW == 1)
+        {
+            MTR_1 = 1; MTR_2 = 0;
+            MTR_3 = 0; MTR_4 = 1;
+        }
+        else{
+            MTR_1 = 0; MTR_2 = 1;
+            MTR_3 = 1; MTR_4 = 0;
+        }
+    }
 }
